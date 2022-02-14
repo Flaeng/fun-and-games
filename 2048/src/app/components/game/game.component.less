@@ -1,0 +1,82 @@
+.game-container {
+  position: relative;
+
+  .buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: lightgray;
+    padding: 6px 10px;
+  }
+}
+.cell {
+  border: 1px solid #000;
+  height: 24.5vh;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: inline-block;
+  }
+}
+
+@color: #008888;
+.bg-2 {
+  background-color: lighten(@color, 40%);
+}
+.bg-4 {
+  background-color: lighten(@color, 30%);
+}
+.bg-8 {
+  background-color: lighten(@color, 20%);
+}
+.bg-16 {
+  background-color: lighten(@color, 10%);
+}
+.bg-32 {
+  background-color: @color;
+}
+.bg-64 {
+  background-color: darken(@color, 10%);
+  color: #fff;
+}
+.bg-128 {
+  background-color: darken(@color, 20%);
+  color: #fff;
+}
+.bg-256 {
+  background-color: darken(@color, 30%);
+  color: #fff;
+}
+.bg-512 {
+  background-color: darken(@color, 40%);
+  color: #fff;
+}
+.bg-1024 {
+  background-color: darken(@color, 50%);
+  color: #fff;
+}
+.bg-2048 {
+  background-color: darken(@color, 60%);
+  color: #fff;
+}
+.bg-4096 {
+  background-color: darken(@color, 70%);
+  color: #fff;
+}
+
+/*
+.cell-background(@index) when (@index <= 16384) {
+    @opacity: 16384 / (@index * @index);
+    @color: lighten(#FA0000, @opacity);
+    .bg-@{index} {
+        background-color: @color;
+    }
+    .cell-background(@index * 2);
+}
+.cell-background(2);
+*/

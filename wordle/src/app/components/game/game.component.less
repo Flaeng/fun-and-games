@@ -1,0 +1,32 @@
+.game-container {
+  position: relative;
+
+  .buttons {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .attempt {
+    display: flex;
+    .letter {
+      flex: 1;
+      text-align: center;
+      font-size: 4rem;
+
+      &.is-current {
+          background-color: lightgray;
+      }
+
+      &.answer-1 {
+          background-color: red;
+      }
+      &.answer-2 {
+          background-color: yellow;
+      }
+      &.answer-3 {
+          background-color: green;
+      }
+    }
+  }
+}

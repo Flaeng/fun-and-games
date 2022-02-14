@@ -1,0 +1,11 @@
+<div class="game-container">
+  <div class="buttons">
+    <button (click)="giveHint()">Help</button>
+    <button (click)="newGame()">New game</button>
+  </div>
+  <div class="attempt" *ngFor="let attempt of game.attempts">
+    <div class="letter answer-{{ letter.result }} {{ letter.isCurrent ? 'is-current' : '' }}" *ngFor="let letter of attempt.letters">
+        {{ letter.letter || '?' }}
+    </div>
+  </div>
+</div>

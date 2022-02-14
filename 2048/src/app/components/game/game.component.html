@@ -1,0 +1,17 @@
+<div class="game-container">
+  <div class="buttons">
+    <!--
+    <input type="number" [(ngModel)]="numberOfRows" width="30" />
+    <input type="number" [(ngModel)]="numberOfColumns" width="30" />
+    -->
+    <button (click)="newGame()">New game</button>
+    <div style="display:inline-block;padding-left: 20px;">Score: {{ getScore() }}</div>
+    <div style="display:inline-block;padding-left: 20px;">Highscore: {{ getHighscore() }}</div>
+  </div>
+
+  <div class="row" *ngFor="let row of game.rows">
+    <div class="cell f-1 bg-{{ cell }}" *ngFor="let cell of row">
+      <span>{{ cell }}</span>
+    </div>
+  </div>
+</div>
