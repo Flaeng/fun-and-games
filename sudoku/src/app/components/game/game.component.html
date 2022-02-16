@@ -1,0 +1,13 @@
+<div class="game-container">
+  <div class="buttons">
+    <button (click)="bruteForce()">Brute force</button>
+    <button (click)="newGame()">Clear board</button>
+  </div>
+  <div class="board">
+    <div class="row" *ngFor="let row of game.grid; let y = index;trackBy:trackByIndex">
+      <div class="cell" *ngFor="let cell of row; let x = index;trackBy:trackByIndex">
+        <input [(ngModel)]="game.grid[y][x]" />
+      </div>
+    </div>
+  </div>
+</div>
